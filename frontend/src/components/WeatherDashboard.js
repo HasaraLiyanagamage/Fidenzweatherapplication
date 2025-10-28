@@ -40,6 +40,7 @@ function WeatherDashboard() {
 
   useEffect(() => {
     fetchWeatherData();
+    // Auto-refresh every 5 minutes
     const interval = setInterval(fetchWeatherData, 5 * 60 * 1000);
     return () => clearInterval(interval);
   }, []);
